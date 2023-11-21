@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Dapp</title>
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+    <script src="/scripts/metamask.js"></script>
+</head>
+
+<body>
+    <button onclick="sign()">
+        Register
+    </button>
+
+
+    <h3 c>Issue New Certificate</h3>
+
+
+    <label for="certificateID">Certificate ID</label>
+    <input id="certificateID" name="certificateID" type="number" placeholder="000" required />
+
+
+
+    <label for="candidateName">Name</label>
+    <input id="candidateName" name="candidateName" type="text" placeholder="John Doe" required />
+
+
+
+    <label for="courseName">Course</label>
+    <select id="courseName" name="courseName" required>
+        <option hidden value="">Select Course</option>
+        <option value="Certified Blockchain Associate">
+            Certified Blockchain Associate
+        </option>
+        <option value="Certified Ethereum Developer">
+            Certified Ethereum Developer
+        </option>
+        <option value="Certified Hyperledger Fabric Developer">
+            Certified Hyperledger Fabric Developer
+        </option>
+        <option value="Certified Blockchain Architect">
+            Certified Blockchain Architect
+        </option>
+    </select>
+
+    <label for="grade">Grade</label>
+    <select id="grade" name="grade" required>
+        <option hidden value="">Select Grade</option>
+        <option value="S">S</option>
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+    </select>
+
+
+
+    <label for="date">Date</label>
+    <input id="date" name="date" type="date" required />
+
+
+    <button onclick="issueCertificate()"> Submit </button>
+
+</body>
+
+</html>
